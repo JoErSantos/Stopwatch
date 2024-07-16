@@ -75,9 +75,22 @@ button:hover{
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding-inline: 0.5rem;
+
 }
 
 .lap-number{
     font-weight: bold;
+}
+
+
+.time-card{
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+}
+
+.line{
+    background-color: #eee9e9;
+    width: 100%;
+    height: 3px;
 }

@@ -1,7 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { setButtonFunctions, setElements } from './timerLogic.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -21,13 +21,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <h2>Lap Timmer</h2>
       <div id="times-container">
-        <div class="time-card">
-          <span class="lap-number">Lap 1:</span>
-          <span>00:04:43</span>
-        </div>
       </div>
     </div>
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#startBtn')!)
+setElements(document.querySelector<HTMLLabelElement>('#hours')!,document.querySelector<HTMLLabelElement>('#minutes')!,
+  document.querySelector<HTMLLabelElement>('#seconds')!,document.querySelector<HTMLLabelElement>('#milliseconds')!,
+  document.querySelector<HTMLDivElement>('#times-container')!)
+
+setButtonFunctions(document.querySelector<HTMLButtonElement>('#startBtn')!,document.querySelector<HTMLButtonElement>('#stopBtn')!,
+  document.querySelector<HTMLButtonElement>('#pauseBtn')!,document.querySelector<HTMLButtonElement>('#resetBtn')!)
